@@ -1,11 +1,14 @@
 
-NAME = a
+NAME = animal
 
 CC = c++
 FLAGS = -g3 -Wall -Werror -Wextra -std=c++98
 
 INCLUDE = includes
-SRC =	main.cpp
+SRC =	Animal.cpp\
+		Cat.cpp\
+		Dog.cpp\
+		main.cpp
 SRCS = $(addprefix src/, $(SRC))
 OBJS = $(SRCS:.cpp=.o)
 
