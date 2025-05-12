@@ -25,6 +25,16 @@ int	main(void)
 	create(a, 10);
 	for (int i = 0; i < 10; i++)
 		a[i]->makeSound();
+
+	std::cout << "\tAssignment test\n" << std::string(30, '-') << std::endl;
+	*a[0] = *a[1];
+
+	std::cout << "\tCopy test\n" << std::string(30, '-') << std::endl;
+	Cat	*b = new Cat();
+	Cat	*c = new Cat(*b);
+	delete b;
+	delete c;
+	
 	destroy(a, 10);
 	return (0);
 }
