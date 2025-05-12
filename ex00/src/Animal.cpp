@@ -4,23 +4,23 @@
 
 Animal::Animal(void) : type("Animal")
 {
-	std::cout << BRIGHT_GREEN << *this << ": constructor called\n" RESET;
+	std::cout << BRIGHT_GREEN << "Animal: constructor called\n" RESET;
 }
 Animal::Animal(const Animal &other)
 {
-	std::cout << BRIGHT_GREEN << *this << ": copy constructor called\n" RESET;
+	std::cout << BRIGHT_GREEN << "Animal: copy constructor called\n" RESET;
 	*this = other;
 }
 Animal&	Animal::operator=(const Animal &other)
 {
-	std::cout << BRIGHT_GREEN << *this << ": assingment operator called\n" RESET;
+	std::cout << BRIGHT_GREEN << "Animal: assingment operator called\n" RESET;
 	if (this != &other)
 		this->type = other.type;
 	return (*this);
 }
 Animal::~Animal(void)
 {
-	std::cout << BRIGHT_RED << *this << ": destructor called\n" RESET;
+	std::cout << BRIGHT_RED << "Animal: destructor called\n" RESET;
 }
 std::ostream &operator<<(std::ostream &out, const Animal &other)
 {
@@ -36,5 +36,5 @@ const std::string	Animal::getType(void) const
 
 void	Animal::makeSound(void) const
 {
-	std::cout << ORANGE << *this << ": *weird animal noises*\n" RESET;
+	std::cout << ORANGE << "Animal: *weird animal noises*\n" RESET;
 }

@@ -8,6 +8,8 @@ INCLUDE = includes
 SRC =	Animal.cpp\
 		Cat.cpp\
 		Dog.cpp\
+		WrongAnimal.cpp\
+		WrongCat.cpp\
 		main.cpp
 SRCS = $(addprefix src/, $(SRC))
 OBJS = $(SRCS:.cpp=.o)

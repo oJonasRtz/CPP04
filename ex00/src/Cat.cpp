@@ -34,5 +34,5 @@ std::ostream &operator<<(std::ostream &out, const Cat &other)
 
 void	Cat::makeSound(void) const
 {
-	std::cout << ORANGE << *this << ": *confused cat noises*\n" RESET;
+	std::cout << ORANGE << *this << ": *Miaaaaaaaaaaaauuuuuuu*\n" RESET;
 }
