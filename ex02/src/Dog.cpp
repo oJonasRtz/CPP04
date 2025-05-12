@@ -1,12 +1,12 @@
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal()
+Dog::Dog(void) : AbsAnimal()
 {
 	type = "Dog";
 	std::cout << BRIGHT_GREEN << *this << ": constructor called\n" << RESET;
 	this->brain = new Brain();
 }
-Dog::Dog(const Dog &other): Animal()
+Dog::Dog(const Dog &other) : AbsAnimal()
 {
 	std::cout << BRIGHT_GREEN << "Dog: copy constructor\n" RESET;
 	this->brain = NULL;
@@ -47,4 +47,9 @@ void	Dog::addIdea(const std::string &idea)
 void	Dog::showIdeas(void)
 {
 	this->brain->showIdeas();
+}
+
+const std::string	Dog::getType(void) const
+{
+	return (type);
 }

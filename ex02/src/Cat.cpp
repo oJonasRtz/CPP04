@@ -2,14 +2,14 @@
 
 #pragma region Constructors
 
-Cat::Cat(void) : Animal()
+Cat::Cat(void) : AbsAnimal()
 {
 	this->type = "Cat";
 	std::cout << BRIGHT_GREEN << *this << ": constructor called\n" RESET;
 	this->brain = new Brain();
 }
 
-Cat::Cat(const Cat &other): Animal()
+Cat::Cat(const Cat &other) : AbsAnimal()
 {
 	std::cout << BRIGHT_GREEN << "Cat: copy constructor called\n" RESET;
 	this->brain = NULL;
@@ -54,4 +54,9 @@ void	Cat::addIdea(const std::string &idea)
 void	Cat::showIdeas(void)
 {
 	this->brain->showIdeas();
+}
+
+const std::string	Cat::getType(void) const
+{
+	return (type);
 }

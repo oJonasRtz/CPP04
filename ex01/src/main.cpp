@@ -34,7 +34,15 @@ int	main(void)
 	Cat	*c = new Cat(*b);
 	delete b;
 	delete c;
-	
+
+	std::cout << "\tBrain test\n" << std::string(30, '-') << std::endl;
+	Animal *d = new Cat();
+	static_cast<Cat*>(d)->addIdea("Sell hot dog");
+	static_cast<Cat*>(d)->addIdea("Conquer the world");
+	static_cast<Cat*>(d)->showIdeas();
+	delete d;
+
+	std::cout << "\tDestructor test\n" << std::string(30, '-') << std::endl;
 	destroy(a, 10);
 	return (0);
 }
